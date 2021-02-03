@@ -140,8 +140,7 @@ const multiChoiceAnswer = text => {
 const processResponse = val => {
   removeLoader();
 
-  return val
-  /* if (val.fulfillment) {
+  if (val.fulfillment) {
     let output = "";
     let messagesLength = val.fulfillment.messages.length;
 
@@ -189,7 +188,7 @@ const processResponse = val => {
     return output;
   } else {
     return val;
-  } */
+  }
 };
 
 const setResponse = (val, delay = 0) => {
