@@ -140,7 +140,8 @@ const multiChoiceAnswer = text => {
 const processResponse = val => {
   removeLoader();
 
-  if (val.fulfillment) {
+  return val
+  /* if (val.fulfillment) {
     let output = "";
     let messagesLength = val.fulfillment.messages.length;
 
@@ -188,7 +189,7 @@ const processResponse = val => {
     return output;
   } else {
     return val;
-  }
+  } */
 };
 
 const setResponse = (val, delay = 0) => {
@@ -210,9 +211,28 @@ const scrollDown = () => {
 };
 
 const send = (text = "") => {
-  fetch(`${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
+
+  fetch(`${baseUrl}set`, {
+    method: 'POST',
+    dataType: 'json',
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    body: JSON.stringify({data: {codigo: text}})
+  })
+    .then(res => res.json())
+    .then(res => setResponse(res.message, loadingDelay + aiReplyDelay))
+    .catch(error => {
+      setResponse(errorMessage, loadingDelay + aiReplyDelay);
+      resetInputField();
+      console.log(error);
+    });
+
+  /* fetch(`${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
     method: "GET",
     dataType: "json",
+    cache: 'no-cache',
+    credentials: 'same-origin',
     headers: {
       Authorization: "Bearer " + accessToken,
       "Content-Type": "application/json; charset=utf-8",
@@ -234,7 +254,7 @@ const send = (text = "") => {
       setResponse(errorMessage, loadingDelay + aiReplyDelay);
       resetInputField();
       console.log(error);
-    });
+    }); */
 
   aiMessage(loader, true, loadingDelay);
 };
