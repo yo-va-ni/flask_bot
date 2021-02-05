@@ -210,6 +210,13 @@ const scrollDown = () => {
 };
 
 const send = (text = "") => {
+  const aux_body = {
+    data: {
+      nuevo: (getCookie('codigo') == '' || getCookie('codigo') == 'undefined') ? true : false,
+      content: text
+    }
+  }
+  console.log(aux_body);
 
   fetch(`${baseUrl}set`, {
     method: 'POST',
@@ -217,10 +224,15 @@ const send = (text = "") => {
     headers: {
       "Content-Type": "application/json; charset=utf-8",
     },
-    body: JSON.stringify({data: {codigo: text}})
+    body: JSON.stringify(aux_body),
   })
     .then(res => res.json())
-    .then(res => setResponse(res.message, loadingDelay + aiReplyDelay))
+    .then(res => {
+      if (res.cookie !== '') {
+        setCookie('codigo', res.cookie, 1);
+      }
+      setResponse(res.message, loadingDelay + aiReplyDelay);
+    })
     .catch(error => {
       setResponse(errorMessage, loadingDelay + aiReplyDelay);
       resetInputField();
@@ -257,3 +269,26 @@ const send = (text = "") => {
 
   aiMessage(loader, true, loadingDelay);
 };
+
+getCookie = (cname) => {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+setCookie = (cname, cvalue, exdays) => {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}

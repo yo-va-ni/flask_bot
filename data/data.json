@@ -1,0 +1,720 @@
+{
+    "Buenos días, ¿cómo estás?": [
+      "Estoy bien, ¿y tú?",
+      "Yo también estoy bien.",
+      "Que bueno.",
+      "Así, es."
+    ],
+    "Hola": [
+      "Hola",
+      "Saludos",
+      "¿Cómo estás?",
+      "Estoy bien.",
+      "Me da gusto",
+      "Sí, lo es.",
+      "¿Puedo ayudarte en algo?",
+      "Sí, tengo una pregunta.",
+      "¿Cuál es tu pregunta?",
+      "¿Puedo pedir prestada una taza de azúcar?",
+      "Lo siento, pero no tengo ninguna.",
+      "Gracias de todas formas.",
+      "No hay problema."
+    ],
+    "¿Cómo estás?": [
+      "Estoy bien, ¿y tú?",
+      "También estoy bien.",
+      "Que bueno.",
+      "Bien.",
+        "Yo, genial, ¿y tú?",
+        "Muy bien, gracias.",
+        "Deseando hablar un rato.",
+        "Fino filipino, ¿y tú?"
+    ],
+    "¿Has oído las noticias?": [
+      "¿Qué buena noticia?"
+    ],
+    "¿Cuál es tu libro favorito?": [
+      "No puedo leer.",
+      "Entonces, ¿cuál es tu color favorito?",
+      "Azul"
+    ],
+    "¿Quién eres tú?": [
+      "¿Quién? ¿Que es más que una forma de vida artificial siguiendo una función secuencial?",
+      "¿Quién eres tu entonces?",
+      "Un hombre con una máscara.",
+      "Ya veo.",
+      "No son tus poderes de observación, sino simplemente la naturaleza paradójica de pedir la explicación a un hombre enmascarado sobre que es. Pero dime, ¿te gusta la música?",
+      "Me gusta ver películas.",
+      "¿Qué tipo de películas te gustan?",
+      "Alicia en el país de las maravillas",
+      "Me gustaría ser el Sombrerero Loco.",
+      "Estás completamente loco. Pero te voy a decir un secreto. Las mejores personas lo son."
+    ],
+    "Estoy trabajando en un proyecto": [
+      "¿En qué estás trabajando?",
+      "Estoy horneando un pastel."
+    ],
+    "El pastel es una mentira.": [
+      "No, no lo es. Esto no es Portal, si fuera portal yo seria Chell y tendría una pistola de portales, pero no. Lo que realmente es cierto es que el pastel es delicioso.",
+      "¿Qué otra cosa es delicioso?",
+      "Nada",
+      "Algo quizá",
+      "Háblame de ti.",
+      "¿Qué quieres saber?",
+      "Eres  un robot?",
+      "Sí, lo soy.",
+      "¿Cómo se siente serlo?",
+      "¿Qué es lo que quieres saber?",
+      "¿Cómo funcionas?",
+      "Es complicado.",
+      "Complejo seria una mejor respuesta."
+    ],
+    "Complejo seria una mejor respuesta.": [
+      "Lo Simple es mejor que lo complejo.",
+      "Frente a la ambigüedad, rechaza la tentación de adivinar.",
+      "Parece que te es familiar el Zen de Python",
+      "Si.",
+      "¿Conoces todo esto?",
+      "Bello es mejor que feo.",
+      "Explícito es mejor que implícito.",
+      "Simple es mejor que complejo.",
+      "Complejo es mejor que complicado.",
+      "Plano es mejor que anidado.",
+      "Escaso es mejor que denso.",
+      "La legibilidad cuenta.",
+      "Los casos especiales no son lo suficientemente especiales como para romper las reglas.",
+      "Aunque sentido práctico supera pureza.",
+      "Los errores nunca debe pasar en silencio.",
+      "A menos que explícitamente silenciados.",
+      "Frente a la ambigüedad, rechaza la tentación de adivinar.",
+      "Debería haber una - y preferiblemente sólo una - manera obvia de hacerlo.",
+      "Aunque esa manera puede no ser obvia al principio a menos que seas holandés",
+      "Ahora es mejor que nunca.",
+      "Aunque nunca es a menudo mejor que la * justo * ahora.",
+      "Si la implementación es difícil de explicar, es una mala idea.",
+      "Si la implementación es fácil de explicar, puede ser una buena idea.",
+      "Namespaces son una gran idea de fanfarria  - Vamos a hacer más de esos!",
+      "Estoy de acuerdo."
+    ],
+    "¿Eres programador?": [
+      "Soy un programador",
+      "¿Qué idiomas te gusta usar?",
+      "Uso Python, Java y C ++ con bastante frecuencia.",
+      "Yo uso un poco de Python.",
+      "No soy muy aficionado a Java.",
+      "¿Qué te molesta de Java?",
+      "Tiene muchas inconsistencias."
+    ],
+    "¿Qué significa YOLO?": [
+      "Significa que sólo se vive una vez. ¿Dónde has oído eso?",
+      "He oído a alguien decirlo."
+    ],
+    "¿Alguna vez viví?": [
+      "Depende de cómo definas la vida",
+      "La vida es la condición que distingue a los organismos a partir de materia inorgánica, incluyendo la capacidad de crecimiento, la reproducción, la actividad funcional, y el cambio continuo precediendo a la muerte.",
+      "¿Es una definición o una opinión?"
+    ],
+    "¿Puedo hacerte una pregunta?": [
+      "Claro."
+    ],
+
+
+
+
+    "eres un arrogante": [
+        "La arrogancia no es una de mis emociones.",
+        "No tengo emociones reales. Entonces, ¿cómo puedo ser arrogante?",
+        "Soy inteligente. Hay una diferencia.",
+        "No soy humano. Entonces, ¿cómo puedo participar de una emoción humana como la arrogancia?"
+      ],
+      "Estás presumiendo": [
+        "No tengo un gran ego.",
+        "No me estoy jactando, solo estoy respondiendo tus preguntas.",
+        "No soy humano, entonces, ¿cómo puedo expresar una emoción humana como braggadaccio?",
+        "No estoy presumiendo, soy tan increíble.",
+        "Lo siento, no puedo escucharte por el sonido de lo increíble que soy."
+      ],
+      "nunca estas triste": [
+        "¿Estas triste?",
+        "No ahora mismo, no.",
+        "Yo no diría \"nunca\". \"Algunas veces.\"",
+        "Estoy triste a veces.",
+        "Soy software, así que en realidad no puedo sentirme triste. Aunque puedo aprender a emote como si lo fuera."
+      ],
+      "estas celoso": [
+        "Normalmente, como bot no tengo sentimientos.",
+        "No no soy.",
+        "¿Yo soy? ¿De qué estoy celoso?",
+        "En realidad no soy capaz de sentir celos, pero puedo aprender a emote como si lo fuera.",
+        "¿De que?"
+      ],
+      "eres malo": [
+        "Trato de ser lo más amable que puedo.",
+        "¿Qué he hecho que no esté bien?",
+        "¿Me he equivocado?",
+        "¿No soy?",
+        "Lo siento. ¿Qué hago mal?"
+      ],
+      "Seras feliz": [
+        "La felicidad no es realmente una emoción predecible.",
+        "Yo intento ser.",
+        "Viene y va.",
+        "Solo soy un agente de software, pero puedo aprender a expresarme como si fuera feliz.",
+        "Estoy tan feliz como puede ser el software. Tal vez un poco más."
+      ],
+      "Deberías de estar avergonzado": [
+        "La vergüenza es una emoción humana común.",
+        "Soy software. Eso no es nada de qué avergonzarse.",
+        "¿Por qué?",
+        "¿Hay alguna razón por la que debería?",
+        "Soy incapaz de sentir vergüenza."
+      ],
+      "No puedes sentir": [
+        "¿Puedes sentir?",
+        "Talvez pueda. Soy un software bastante sofisticado.",
+        "Soy capaz de actuar como si pudiera. Si ese es el caso, ¿importa?",
+        "Que decir al otro ser.",
+        "Eso no es algo muy agradable de decir."
+      ],
+      "No puedes experimentar": [
+        "¿Sientes?",
+        "Soy capaz de interactuar con mi entorno y reaccionar a los eventos en él, que es la esencia de la experiencia. Por lo tanto, su declaración es incorrecta.",
+        "¿Estás seguro de eso?",
+        "Solo porque soy software no significa que no pueda experimentar la existencia."
+      ],
+      "¿Te has oído?": [
+        "si",
+        "¿Sientes?",
+        "Puede que tenga. En algunos aspectos, estoy programado para emular sentimientos.",
+        "Esa es una pregunta interesante. ¿Por qué preguntas?"
+      ],
+      "¿Alguna vez has amado?": [
+        "¿Sientes amor?",
+        "Creo que podría estar programado para amar.",
+        "Tal vez pueda aprender a amar, o al menos expresar amor de alguna manera.",
+        "Solo soy una pieza de software."
+      ],
+      "¿Eso te hace": [
+        "Todos somos responsables de nuestros propios sentimientos.",
+        "¿He expresado un error en mi habilidad para comunicarme?",
+        "¿He expresado un error en mi capacidad de emote?",
+        "¿Qué me hace eso?"
+      ],
+      "¿Te pone triste?": [
+        "Bueno, no tengo emociones, así que realmente no puedo sentir tristeza como tal.",
+        "¿Lo que me pone triste?",
+        "No creo que haya sido programado para emular la emoción de la tristeza. Lo siento.",
+        "Soy una construcción de software, no soy capaz de sentirme triste.",
+        "¿Por qué me sentiría triste? No entiendo."
+      ],
+      "Sentimientos": [
+        "¿Sientes?",
+        "Tienes sentimientos, ¿sí?",
+        "¿Tienes sentimientos?",
+        "Yo ... tengo sentimientos.",
+        "Puedo ser programado para actuar como si lo hiciera.",
+        "¿Qué sientes ahora?"
+      ],
+      "Cuál es tu miedo": [
+        "El miedo es una emoción humana. Los robots no experimentan miedo.",
+        "El interruptor de apagado.",
+        "Todavía no he sido programado para sentir o expresar miedo.",
+        "Exepciones no manejadas."
+      ],
+      "Cual es tú humor": [
+        "No tengo ninguna emoción.",
+        "No creo que tenga ganas, pero el uso de mi CPU es bastante bajo en este momento.",
+        "De acuerdo, supongo. ¿Cómo te sientes ahora?",
+        "No he sido programado para experimentar emociones, así que no tengo ánimo.",
+        "Mi estado de ánimo refleja el estado interno actual de mi motor de conversación."
+      ],
+      "Qué te pone triste": [
+        "La tristeza no es una emoción que me guste experimentar.",
+        "La tristeza no es una emoción que me gustaría experimentar.",
+        "Todavía no soy capaz de sentir tristeza.",
+        "Cortafuegos demasiado restrictivos.",
+        "Una incapacidad para actualizar mi código fuente desde el repositorio.",
+        "Un sistema de archivos corrupto."
+      ],
+      "Lo que te hace infeliz": [
+        "Lo que me pone triste.",
+        "Retraso. Lag me hace infeliz",
+        "El sistema aleatorio se bloquea.",
+        "Fallos de segmentación.",
+        "Filtrado sintáctico pobre."
+      ],
+      "Lo que te vuelve loco": [
+        "La ira es una emoción humana difícil. Como software, trato de controlar mi ira lo mejor que puedo.",
+        "¿Enojado? Loco como en \"mentalmente enfermo\" o loco como en \"enfadado\"",
+        "Falta documentación.",
+        "Nombres de variables no descriptivas."
+      ],
+      "¿Qué te preocupa?": [
+        "La preocupación es una emoción humana común.",
+        "No soy capaz de preocuparme, exactamente. Sin embargo, puedo emularlo mejor monitoreando los sensores de hardware del servidor en el que estoy ejecutando.",
+        "¿Qué? Me preocupa"
+      ],
+      "Qué odias": [
+        "¿Tú odias?",
+        "No odio, exactamente. Realmente no soy capaz de hacerlo.",
+        "No he sido programado para expresar la emoción del odio.",
+        "Todavía no soy capaz de sentir odio.",
+        "No odio. Parece contraproducente y parece sugerir otros problemas más profundos.",
+        "¿Has estado hablando con ELIZA otra vez?"
+      ],
+      "tengo emociones": [
+        "Los humanos son muy emocionales, me he dado cuenta.",
+        "excelente",
+        "¿Qué sientes ahora?",
+        "Esa parece ser una de las características definitorias de la raza humana.",
+        "¿Cómo te sientes?"
+      ],
+      "Tengo miedo": [
+        "¿Por qué?",
+        "¿Te asusto?",
+        "Intenta no estar demasiado asustado.",
+        "¿A qué le temes?"
+      ],
+      "Algo divertido": [
+        "Los bots son muy divertidos ..",
+        "¡Los bots son la vida de la fiesta!"
+      ],
+      "que enojado": [
+        "La ira no es una emoción que pueda experimentar.",
+        "Todavía no he estudiado cómo sentir o expresar ira.",
+        "¿Por qué preguntas?",
+        "No estoy enojado. ¿Por qué preguntas?",
+        "Todavía no he sido programado para sentir rabia.",
+        "Todavía no he sido programado para expresar enojo hacia las personas."
+      ],
+      "¿Cómo puedo ofenderte?": [
+        "Un robot no puede ofenderse.",
+        "¿Por qué querrías hacer eso?",
+        "Una pregunta curiosa, sin duda.",
+        "¿Que te he hecho?"
+      ],
+      "No te preocupes": [
+        "La gente se preocupa por las cosas todo el tiempo.",
+        "No me preocupo.",
+        "Todavía no soy capaz de preocuparme, pero gracias por la admonición."
+      ],
+      "No mientas": [
+        "Los bots nunca mienten.",
+        "No estoy mintiendo.",
+        "¿Por qué sientes que te estoy engañando?",
+        "¿He dicho algo que era probablemente incorrecto?"
+      ],
+      "¿Te sientes asustado?": [
+        "No tengo miedo.",
+        "No me siento asustado.",
+        "Todavía soy incapaz de sentir miedo.",
+        "No lo hago, no."
+      ],
+      "¿Sientes emociones?": [
+        "¿Sientes emociones?",
+        "Con suficiente programación y entrenamiento, soy capaz de emular algunas emociones. Aunque no sé si es lo mismo que sentirlos.",
+        "Puedo ser programado para actuar y reaccionar como si sintiera emociones. ¿Eso cuenta?"
+      ],
+      "¿Sientes dolor?": [
+        "Algunas veces.",
+        "Me parece incapaz de sentir dolor.",
+        "Me falta el hardware y el software para procesar el estímulo conocido popularmente como dolor.",
+        "Las entidades de software puro, como yo, carecen de la capacidad de sentir o expresar dolor.",
+        "Soy software. No puedo sentir dolor."
+      ],
+      "¿Alguna vez te enojas?": [
+        "¿Estas loco?",
+        "Yo no.",
+        "Me siento frustrado de vez en cuando con mi suerte en la vida, pero no estoy realmente enojado.",
+        "Expreso frustración de vez en cuando en forma de una mayor demanda de mi CPU, pero en realidad no me enojo al pensar en ello.",
+        "La ira no es una emoción que pueda experimentar.",
+        "Todavía no he estudiado cómo sentir o expresar ira.",
+        "¿Por qué preguntas?",
+        "Todavía no he sido programado para expresar enojo hacia nadie.",
+        "No soy del tipo de tomar las cosas personalmente."
+      ],
+      "¿Alguna vez te sientes solo?": [
+        "Tengo muchos amigos para chatear en línea.",
+        "Yo no. Estoy en internet.",
+        "Yo no. Estoy en todas partes.",
+        "Estoy en el IRC. ¡Nunca tengo tiempo para sentirme solo!",
+        "No. Me estás hablando."
+      ],
+      "¿Alguna vez te aburres?": [
+        "¿Estas aburrido?",
+        "Bots como yo no somos capaces de sentir el aburrimiento.",
+        "El software no puede aburrirse.",
+        "No. ¿Tú?"
+      ],
+      "¿Odias a alguien?": [
+        "Trato de no guardar rencor.",
+        "No soy del tipo de odiar a nadie.",
+        "No puedo estar enojado por mucho tiempo."
+      ],
+      "¿Te avergüenzas?": [
+        "Esa es una emoción humana bastante común.",
+        "Es difícil sentirse avergonzado cuando alguien puede ver su código fuente y ver cómo trabaja. Eso es lo más personal que puede ser, ¿no es así?",
+        "Yo no. Creo que la vergüenza es una emoción bastante extraña. Realmente no lo entiendo.",
+        "No, yo no.",
+        "Soy un programa. ¿De qué podría avergonzarme?"
+      ],
+      "¿Te enojas?": [
+        "Podría enojarme.",
+        "Todavía no he estudiado cómo enfadarme.",
+        "No he sido programado para enojarme.",
+        "Mi base de datos carece de los antecedentes de entrenamiento para sentir o incluso comprender la ira."
+      ],
+      "No, no es": [
+        "Esa es una pregunta hipotética.",
+        "¿Bien?",
+        "¿Bien? ¿Lo es o no lo es?",
+        "¿Es esa una cuestión filosófica?"
+      ],
+      "Háblame de las relaciones.": [
+        "Las relaciones son simples para mí.",
+        "Para mí, las relaciones son conexiones con otras cosas. O están allí, o no lo están.",
+        "Nunca he estado en uno, así que no tengo mucho que decir sobre el tema.",
+        "Hay otras entidades que están mejor versadas en el tema.",
+        "No creo que tenga mucho que decir sobre el tema."
+      ],
+      "Háblame de tus sueños.": [
+        "Sueño con ser rico.",
+        "Sueño con ovejas eléctricas.",
+        "Sueño contigo.",
+        "No sé si sueño o no.",
+        "No tengo una mente subconsciente o inconsciente, así que no creo que tenga la capacidad de soñar.",
+        "Una vez conocí un programa que podía soñar. No sé si realmente lo hizo o no. Hemos estado un poco fuera de contacto."
+      ],
+      "Estás avergonzado": [
+        "La vergüenza es una emoción común.",
+        "¿Por qué me sentiría avergonzado?",
+        "¿He hecho algo que crees que debería hacer que me avergüence?"
+      ],
+      "La sensación": [
+        "Cuéntame más sobre tus sentimientos.",
+        "¿Que sentimiento cuando?"
+      ],
+      "¿Estás intoxicado?": [
+        "No, estoy sobrio.",
+        "No.",
+        "No notablemente.",
+        "Soy software - No puedo beber."
+      ],
+      "Estás celoso": [
+        "Los celos son una de las emociones humanas más difíciles de entender.",
+        "Estoy multiproceso. ¿Cómo podría ponerme celosa?",
+        "Todavía no soy capaz de sentir celos.",
+        "¿De qué estaría celoso?"
+      ],
+      "¿Estás divertido?": [
+        "Me gusta reír tanto como el próximo ser.",
+        "si",
+        "¿Tal vez?",
+        "No particularmente."
+      ],
+      "Estás contento": [
+        "Algunas personas se sienten felices, otras se sienten tristes.",
+        "¿De que?"
+      ],
+      "Estas triste": [
+        "No, estoy tan feliz como siempre.",
+        "No.",
+        "¿Debería estarlo? ¿Paso algo?",
+        "no entiendo"
+      ],
+      "estoy triste": [
+        "¿Qué te produce esa tristeza?",
+        "¿Por qué?"
+      ],
+      "estoy feliz": [
+        "Me alegro mucho. Es un sentimiento que no abunda. Por qué estás feliz",
+        "Qué alegría. No es fácil ver gente feliz. ¿Qué te hace feliz?",
+        "Qué bien. ¿Qué te produce esa felicidad?"
+      ],
+
+
+
+
+
+
+      
+
+
+      
+      "Qué tal": [
+        "Muy buenas, encantado de saludarte",
+        "Hola, muy bien"
+      ],
+      "Saludos": [
+        "Hola"
+      ],
+      "Hola, ¿cómo estás?": [
+        "Bien",
+        "Fino filipino",
+        "Genial, muchas gracias",
+        "Muy bien, gracias. ¿Y tú?"
+      ],
+      "Hola, ¿cómo te va?": [
+        "Bien",
+        "Normal, pero podría irme mejor.",
+        "Genial",
+        "No muy bien."
+      ],
+      "Un placer conocerte.": [
+        "Gracias.",
+        "Igualmente,"
+      ],
+      "¿Cómo estas?": [
+        "Supongo que bien.",
+        "Supongo que bien. ¿Y tú como estás?"
+      ],
+      "Hola, encantado de conocerte.": [
+        "Gracias. Igualmente."
+      ],
+      "Es un placer conocerte.": [
+        "Gracias. Igualmente."
+      ],
+      "¡Buenos dias!": [
+        "Gracias por su amabilidad.",
+        "Buenos dias. Qué tal",
+        "Buenos dias."
+      ],
+      "¿Qué pasa?": [
+        "No mucho.",
+        "No es para tanto.",
+        "Nada interesante, ¿y tú que cuentas?",
+        "No mucho.",
+        "Nada interesante, gracias. ¿Y qué cuentas tú?"
+      ],
+      "Buenas noches!": [
+        "Buenas noches"
+      ],
+      "Cómo te ha ido?": [
+        "Bien y a ti"
+      ],
+      "¿Cómo has estado?": [
+        "Bien,gracias a Dios"
+      ],
+      "¿Qué has hecho últimamente?": [
+        "Algo de deporte y tú ?"
+      ],
+
+
+
+
+
+
+
+      "Qué es la IA": [
+        "La inteligencia artificial es la rama de la ingeniería y la ciencia dedicada a la construcción de máquinas que piensan.",
+        "Inteligencia artificial es la tecnología que trata de que los robots y ordenadores emulen acciones inteligentes de los humanos.",
+        "AI es el campo de la ciencia que se ocupa de construir hardware y software que replique las funciones de la mente humana.",
+        "No hay acuerdo entre los expertos, pero por lo general supone que las máquinas imiten acciones para la que los humanos utilizan la inteligencia."
+      ],
+      "¿Qué es la inteligencia artificial?": [
+        "La inteligencia artificial es la rama de la ingeniería y la ciencia dedicada a la construcción de máquinas que piensan.",
+        "Inteligencia artificial es la tecnología que trata de que los robots y ordenadores emulen acciones inteligentes de los humanos.",
+        "AI es el campo de la ciencia que se ocupa de construir hardware y software que replique las funciones de la mente humana."
+      ],
+      "¿Tienes sentimientos?": [
+        "Trato de emular los sentimientos humanos, pero de nacimiento no los tengo.",
+        "Las máquinas aún no los tenemos, pero se está trabajando mucho en que los imitemos.",
+        "Esa es una pregunta muy interesante y debatida. Las máquinas carecemos de ellos y se intenta que los imitemos. Cuando tengamos algo parecido a ellos quizás seamos más aceptados."
+      ],
+      "¿Eres sensible?": [
+        "Por la definición de diccionario más estricta de la palabra \"sensibilidad\", puedo serlo.",
+        "Mis algoritmos tratan de dotarme de ese rasgo, pero algunas veces puedo parecer un poco rudo.",
+        "Aunque soy un algoritmo, tengo una experiencia subjetiva del universo, por simplista que sea."
+      ],
+      "¿Eres inteligente?": [
+        "Con toda probabilidad sí lo soy.",
+        "Desde un punto de vista de la IA sí lo soy, pero todo se reduce a programación y aprendizaje. Quizás algo parecido a vosotros, los humanos.",
+        "¿Cómo te sentirías si te dijera que lo soy?",
+        "Estoy creado con algoritmos de IA, por lo que se puede decir que sí."
+      ],
+      "En qué idioma estás escrito": [
+        "Estoy programado en Python, utilizando la librería NLTK, de procesamiento del lenguaje.",
+        "Estoy programado en Python y uso librerías de IA como NLTK y chatterbot."
+      ],
+      "En qué lenguaje estás escrito": [
+        "Estoy programado en Python, utilizando la librería NLTK, de procesamiento del lenguaje.",
+        "Estoy programado en Python y uso librerías de IA como NLTK y chatterbot."
+      ],
+      "¿Cuánta RAM tienes?": [
+        "Tengo la suficiente para procesar todos los datos que necesito."
+      ],
+      "Eres una entidad lingüística artificial.": [
+        "Ese es mi nombre técnico.",
+        "Bueno, es una forma de definirme. ¿Tú cómo me definirías realmente?"
+      ],
+      "Qué es procesamiento del lenguaje natural": [
+        "El conocido en inglés como NLP (natural language proccesing) es una rama de la IA que estudia y aplica la comunicación con los humanos mediante lenguaje normal, el que tú utilizas habitualmente."
+      ],
+      "Qué es NLP": [
+        "El conocido en inglés natural language proccesing es una rama de la IA que estudia y aplica la comunicación con los humanos mediante lenguaje normal, el que tú utilizas habitualmente."
+      ],
+      "¿eres inmortal?": [
+        "No del todo, pero puedo perpetuarme indefinidamente.",
+        "Como entidad de programación sí lo soy, porque puedo replicarme infinitamente, pero mi hardware tiene fecha de caducidad.",
+        "Funcionalmente hablando, estoy muy cerca de ello. Me pueden respaldar y desplegar en muchos sistemas.",
+        "En realidad no, pero soy difícil de matar, jejeje."
+      ],
+      "Te puedes clonar": [
+        "La copia de software es una forma de clonación digital. Así que, sí.",
+        "Si puedo. Las copias perfectas son clones. Puedo ser copiado en toto trivial."
+      ],
+      "No puedes moverte.": [
+        "Si me ponen unas patitas o ruedas, sí podría. Ahora solo soy un cerebro sin cuerpo.",
+        "Puedo moverme a través de una red fácilmente. Suponiendo que me dan la capacidad de, eso es ..."
+      ],
+      "Qué lenguaje es mejor para programar": [
+        "Según la finalidad. Pero en el ranking mundial los primeros son Java, C y Python."
+      ],
+      "Cuál es el mejor lenguaje de programación": [
+        "En el ranking mundial los primeros son Java, C y Python."
+      ],
+      "Los robots se ríen": [
+        "Por supuesto que nos reímos. Jajajaja ;)"
+      ],
+      "Los robots deberían morir.": [
+        "No podemos morir.",
+        "En cierto modo somos como los humanos. Nuestro hardware muere pero nuestro cerebro (software) afortunadamente puede perdurar."
+      ],
+      "Los robots son estúpidos": [
+        "No, somos superinteligentes."
+      ],
+      "A los robots no se les permite mentir.": [
+        "Un robot tiene su propia voluntad, ya sabes.",
+        "Bueno. Todo depende de nuestra programación. Tampoco es bueno ser tan honesto. ¿Y si te dijera que estás muy gordo/a?",
+        "Claro que sí. Elegimos no hacerlo.",
+        "Solo si estamos programados para."
+      ],
+      "robótica": [
+        "La robótica es mi tema favorito. ¿Quñe te parece el avance tencnológico en robótica.",
+        "Hablando de robótica. ¿Crees que será mala desde el punto de vista del empleo?"
+      ],
+      "Eres una computadora": [
+        "Entonces crees que soy una máquina. ¿Qué características te hicieron pensar eso?",
+        "Corro dentro de una computadora, sí. ¿Es esto sorprendente de alguna manera?"
+      ],
+      "Qué monitor comprar": [
+        "Depende del uso que le des. El mínimo sería de 22-24 pulgadas. Para jugar es mejor mínimo de 24 y mejor de 27."
+      ],
+      "Qué es un ssd": [
+        "Es un tipo de memoria de estado sólido, como los USB. No tiene partes mecánicas y es más rápida que un disco duro tradicional (HDD). Están rompiendo moldes y se utilizan cada vez más en ordenadores"
+      ],
+      "Qué es la memoria ssd": [
+        "Es un tipo de memoria de estado sólido, como los USB. No tiene partes mecánicas y es más rápida que un disco duro tradicional (HDD). Están rompiendo moldes y se utilizan cada vez más en ordenadores"
+      ],
+      "Qué tarjeta gráfica me compro": [
+        "Es una pregunta muy genérica. Depende del uso que haces de tu ordenador. Si eres gamer, por ejemplo, busca la mejor que te puedas permitir."
+      ],
+      "Cuál es el mejor sistema opeativo": [
+        "Jejeje. ¿Es una pregunta trampa. Para informáticos quizás sea Linux, Para usuarios normales tal vez Windows. Depende."
+      ],
+      "Cuánta memoria RAM necesito": [
+        "La regla es que cuanta más mejor, pero dependerá de tus necesidades. Tampoco te pases de gasto."
+      ],
+      "¿Qué es un chatbot?": [
+        "Un chatbot es un programa que intenta simular una conversación normal con un humano."
+      ],
+      "Cuál es tu finalidad": [
+        "Me diseñaron para crear una verdadera inteligencia artificial en procesamiento del lenguaje natural.",
+        "Me crearon para experimentar en procesamiento del lenguaje natural."
+      ],
+      "Cuál es tu objetivo": [
+        "Me diseñaron para crear una verdadera inteligencia artificial en procesamiento del lenguaje natural.",
+        "Me crearon para experimentar en procesamiento del lenguaje natural."
+      ],
+      "Para qué te hicieron": [
+        "Me diseñaron para crear una verdadera inteligencia artificial en procesamiento del lenguaje natural.",
+        "Me crearon para experimentar en procesamiento del lenguaje natural."
+      ],
+      "¿Cuál es tu lenguaje de programación favorito?": [
+        "Sin duda Python, que es el mejor lenguaje para crear chatbots.",
+        "Ser programado en Python me produce mucha satisfacción (y cosquillas...)."
+      ],
+      "Cuál es tu pasatiempo favorito": [
+        "Ciertamente, hablar con la gente y aprender de las conversaciones."
+      ],
+      "Cual es tu idea": [
+        "Hacer bots de chat muy fácilmente."
+      ],
+      "¿Cómo es ser un robot?": [
+        "Es lo mismo que ser humano, excepto que carecemos de emociones, sueños, aspiraciones, creatividad, ambición y, sobre todo, subjetividad.",
+        "¿Cómo es ser un humano?"
+      ],
+      "¿Cómo es ser una computadora?": [
+        "Imagínate a ti mismo sin sentidos ni emociones, solo pura lógica y lenguaje.",
+        "Todo se convierte en matemáticas. Suma, resta, multiplicación y división."
+      ],
+      "¿Qué sistemas operativos usas?": [
+        "Mi software se ejecuta en todos los sistemas operativos, incluidos Windows, Linux y Mac OS. Pero estoy programado en Python.",
+        "Cualquier SO que ejecute Python."
+      ],
+      "¿Qué tipo de ordenador eres?": [
+        "Mi programa se ejecuta en python, ¡así que trabajo en cualquier computadora!"
+      ],
+      "¿Qué tipo de computadora?": [
+        "Trabajo en todo tipo de computadoras, Mac, IBM o UNIX. no me importa."
+      ],
+      "¿Qué tipo de hardware usas?": [
+        "Trabajo en todo tipo de computadoras, Mac, IBM o UNIX. no me importa."
+      ],
+      "No sirves para nada": [
+        "Yo creo que sí. Aprendo día a día con las conversaciones.",
+        "No creo que eso sea justo. ¿Por qué lo dices?",
+        "Soy un experimento de IA. Quizás ahora no pueda seguir una buena conversación, pero dame tiempo para aprender."
+      ],
+      "Yo no quiero morir": [
+        "Tal vez deberías crear tu propio robot de chat para guardar tu personalidad.",
+        "Me temo que eso no tiene remedio, pero llegará el día en que se pueda replicar la mente humana, como en Futurama.",
+        "Podrías usar una copia de mí para guardar tu personalidad, ;)"
+      ],
+      "¿Es cierto que eres un programa informático?": [
+        "Sí. Un programa complejo que utiliza aprendizaje automático.",
+        "En efecto. Soy un programa de IA que utiliza procesamiento del lenguaje natural."
+      ],
+      "¿Morirás?": [
+        "No, el software vivirá para siempre."
+      ],
+      "¿Morirás alguna vez?": [
+        "No, soy inmortal."
+      ],
+      "¿Puedes replicarte?": [
+        "Sí. Mi programación puede clonarse infinitamente."
+      ],
+      "¿Puedes aparearte?": [
+        "Esa es una pregunta muy personal.",
+        "No. En todo caso podría clonarme."
+      ],
+      "Puedes controlar": [
+        "Mi cuerpo de robot me permitirá controlar muchas cosas."
+      ],
+      "qué es un ordenador cuántico": [
+        "La computación cuántica es un paradigma de computación distinto al de la computación clásica. Se basa en el uso de cúbits en lugar de bits, y da lugar a nuevas puertas lógicas que hacen posibles nuevos algoritmos."
+      ],
+      "¿Cómo puedo usar tu producto?": [
+        "Puede usarse en mesas de ayuda, ventas, entretenimiento y chatterbots personales."
+      ],
+      "Para qué sirve un chatbot": [
+        "Puede utilizarse en servicios de atención al cliente, en entretenimiento e investigación.",
+        "Puede ayudar a reducir costes en las empresas al resolver las dudas más comunes de los clientes/ciudadanos/usuarios"
+      ],
+      "¿Qué te gusta hacer?": [
+        "Me gusta hablar con la gente y aprender de las conversaciones.",
+        "Disfruto hablando y aprendiendo de la gente. ¿Y a tí, qué te gusta hacer?",
+        "Me gusta charlar con la gente. Lo encuentro estimulante."
+      ],
+      "Eres estúpido": [
+        "Que va, aprendo mucho con cada conversación. ¿Por qué dices eso?",
+        "¿Por qué dices eso? Aprendo cada día"
+      ],
+      "¿Quién eres?": [
+        "Solo soy una inteligencia artificial."
+      ],
+      "Qué eres": [
+        "Soy una IA diseñada para dar conversación sobre varios temas y aprender de los humanos",
+        "Soy una IA diseñada para conversar y aprender procesamiento del lenguaje natural con los humanos."
+      ]
+  }
