@@ -212,7 +212,7 @@ const scrollDown = () => {
 const send = (text = "") => {
   const aux_body = {
     data: {
-      nuevo: (getCookie('codigo') == '' || getCookie('codigo') == 'undefined') ? true : false,
+      nuevo: (getItemLS('codigo') == null || getItemLS('codigo') == '' || getItemLS('codigo') == 'undefined') ? true : false,
       content: text
     }
   }
@@ -228,8 +228,10 @@ const send = (text = "") => {
   })
     .then(res => res.json())
     .then(res => {
-      if (res.cookie !== '') {
-        setCookie('codigo', res.cookie, 1);
+      console.log(res)
+      if (res.cookie && res.cookie != '' && res.cookie != 'undefined'){
+        console.warn(res.cookie)
+        setItemLS('codigo', res.cookie);
       }
       setResponse(res.message, loadingDelay + aiReplyDelay);
     })
@@ -270,25 +272,9 @@ const send = (text = "") => {
   aiMessage(loader, true, loadingDelay);
 };
 
-getCookie = (cname) => {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+getItemLS = (cname) => {
+  return localStorage.getItem(cname);
 }
-
-setCookie = (cname, cvalue, exdays) => {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+setItemLS = (cname, cvalue) => {
+  localStorage.setItem(cname, cvalue);
 }

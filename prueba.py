@@ -20,5 +20,10 @@ def get_response(user_input = ''):
             # elif aux > 0.5:
             #     return random.choice('{} ({})'.format(data[key], aux))
         if mini > 0:
-            return '{} - {}'.format(response, mini)
-        return 'Lo siento, no entiendo lo que dices'
+            print('{} - {}'.format(response, mini))
+        else:
+            print('Lo siento, no entiendo lo que dices')
+
+while True:
+    user = input('You: ')
+    print('Bot: {}'.format(get_response(user)))

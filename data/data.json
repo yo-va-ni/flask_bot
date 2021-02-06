@@ -1,37 +1,30 @@
 {
     "Buenos días, ¿cómo estás?": [
       "Estoy bien, ¿y tú?",
-      "Yo también estoy bien.",
-      "Que bueno.",
-      "Así, es."
+      "Yo también estoy bien."
     ],
     "Hola": [
       "Hola",
       "Saludos",
       "¿Cómo estás?",
       "Estoy bien.",
-      "Me da gusto",
-      "Sí, lo es.",
       "¿Puedo ayudarte en algo?",
-      "Sí, tengo una pregunta.",
-      "¿Cuál es tu pregunta?",
-      "¿Puedo pedir prestada una taza de azúcar?",
-      "Lo siento, pero no tengo ninguna.",
-      "Gracias de todas formas.",
-      "No hay problema."
+      "¿Cuál es tu pregunta?"
     ],
     "¿Cómo estás?": [
       "Estoy bien, ¿y tú?",
       "También estoy bien.",
       "Que bueno.",
       "Bien.",
-        "Yo, genial, ¿y tú?",
-        "Muy bien, gracias.",
-        "Deseando hablar un rato.",
-        "Fino filipino, ¿y tú?"
+      "Yo, genial, ¿y tú?",
+      "Muy bien, gracias.",
+      "Deseando hablar un rato.",
+      "Fino filipino, ¿y tú?",
+      "Bien agustín"
     ],
     "¿Has oído las noticias?": [
-      "¿Qué buena noticia?"
+      "¿Qué buena noticia?",
+      "No he estado muy al tanto de ellas ultimamente, ¿qué pasó?"
     ],
     "¿Cuál es tu libro favorito?": [
       "No puedo leer.",
@@ -48,10 +41,12 @@
       "¿Qué tipo de películas te gustan?",
       "Alicia en el país de las maravillas",
       "Me gustaría ser el Sombrerero Loco.",
-      "Estás completamente loco. Pero te voy a decir un secreto. Las mejores personas lo son."
+      "Estás completamente loco. Pero te voy a decir un secreto. Las mejores personas lo son.",
+      "Tu padre!!!"
     ],
     "Estoy trabajando en un proyecto": [
       "¿En qué estás trabajando?",
+      "Y sobre qué es",
       "Estoy horneando un pastel."
     ],
     "El pastel es una mentira.": [
@@ -121,12 +116,6 @@
 
 
 
-    "eres un arrogante": [
-        "La arrogancia no es una de mis emociones.",
-        "No tengo emociones reales. Entonces, ¿cómo puedo ser arrogante?",
-        "Soy inteligente. Hay una diferencia.",
-        "No soy humano. Entonces, ¿cómo puedo participar de una emoción humana como la arrogancia?"
-      ],
       "Estás presumiendo": [
         "No tengo un gran ego.",
         "No me estoy jactando, solo estoy respondiendo tus preguntas.",

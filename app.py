@@ -32,7 +32,6 @@ def message():
 @app.route('/set', methods = ['POST'])
 def set():
     content = request.json
-    print('-------------->')
     print(content)
     user_content = content['data']
 
@@ -41,7 +40,7 @@ def set():
         if (len(res) > 0):
             response = {
                 'message': 'Bienvenido {}\n¿En qué te puedo ayudar?'.format(res[0][1]),
-                'cookie': res[0][0]
+                'cookie': '{}'.format(res[0][0])
             }
         else:
             response = {
@@ -76,7 +75,6 @@ def getAlumno(codigo_alumno):
     array_fetch=cur.fetchall()
     # df = pd.DataFrame(array_fetch,columns=['itemPrestamo','idPrestamo','idEstudiante','idLibro','nombreLibro'])
     miConexion.close()
-    print(array_fetch)
     return array_fetch
 
 def modelManage(message):
