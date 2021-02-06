@@ -137,63 +137,25 @@ const multiChoiceAnswer = text => {
   return;
 };
 
-const processResponse = val => {
+const processResponse = res => {
   removeLoader();
 
-  if (val.fulfillment) {
-    let output = "";
-    let messagesLength = val.fulfillment.messages.length;
-
-    for (let i = 0; i < messagesLength; i++) {
-      let message = val.fulfillment.messages[i];
-      let type = message.type;
-
-      switch (type) {
-        // 0 fulfillment is text
-        case 0:
-          let parsedText = linkify(message.speech);
-          output += `<p>${parsedText}</p>`;
-          break;
-
-        // 1 fulfillment is card
-        case 1:
-          // let imageUrl = message.imageUrl
-          // let imageTitle = message.title
-          // let imageSubtitle = message.subtitle
-          // output += `<img src='${imageUrl}' alt='${imageTitle}${imageSubtitle}' />`
-          break;
-
-        // 2 fulfillment is button list
-        case 2:
-          let title = message.title;
-          let replies = message.replies;
-          let repliesLength = replies.length;
-          output += `<p>${title}</p>`;
-
-          for (let i = 0; i < repliesLength; i++) {
-            let reply = replies[i];
-            let encodedText = reply.replace(/'/g, "zzz");
-            output += `<button onclick='multiChoiceAnswer("${encodedText}")'>${reply}</button>`;
-          }
-
-          break;
-
-        // 3 fulfillment is image
-        case 3:
-          // console.log('Fulfillment is image - TODO')
-          break;
-      }
-    }
-
-    return output;
-  } else {
-    return val;
+  /* TODO manage TAG */
+  switch (res.tag) {
+    case 'despedida':
+      removeItemLS('codigo')
+      break;
+  
+    default:
+      break;
   }
+  
+  return res.message;
 };
 
-const setResponse = (val, delay = 0) => {
+const setResponse = (res, delay = 0) => {
   setTimeout(() => {
-    aiMessage(processResponse(val));
+    aiMessage(processResponse(res));
   }, delay);
 };
 
@@ -233,7 +195,10 @@ const send = (text = "") => {
         console.warn(res.cookie)
         setItemLS('codigo', res.cookie);
       }
-      setResponse(res.message, loadingDelay + aiReplyDelay);
+      if (res.bye) {
+        removeItemLS('codigo');
+      }
+      setResponse(res, loadingDelay + aiReplyDelay);
     })
     .catch(error => {
       setResponse(errorMessage, loadingDelay + aiReplyDelay);
@@ -277,4 +242,7 @@ getItemLS = (cname) => {
 }
 setItemLS = (cname, cvalue) => {
   localStorage.setItem(cname, cvalue);
+}
+removeItemLS = (cname) => {
+  localStorage.removeItem(cname);
 }

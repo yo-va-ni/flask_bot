@@ -15,7 +15,7 @@ def get_response(user_input = ''):
             aux = statement1.similarity(statement2)
             if aux > mini:
                 mini = aux
-                response = random.choice(data[key])
+                response = random.choice(data[key]['responses'])
                 # print('s1: {}\ns2: {}\nsimilarity: {}'.format(key, user_input, aux))
             # elif aux > 0.5:
             #     return random.choice('{} ({})'.format(data[key], aux))

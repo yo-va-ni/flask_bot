@@ -40,19 +40,18 @@ def set():
         if (len(res) > 0):
             response = {
                 'message': 'Bienvenido {}\n¿En qué te puedo ayudar?'.format(res[0][1]),
-                'cookie': '{}'.format(res[0][0])
+                'cookie': '{}'.format(res[0][0]),
+                
             }
         else:
             response = {
                 'message': 'Por favor, ingresa tu codigo para continuar',
-                'cookie': ''
+                'cookie': '',
             }
     else:
-        # response = modelmanage(user_content['content'])
+        model_response = get_response(user_content['content'])
+        response = model_manage(model_response)
         
-        response = {
-            'message': get_response(user_content['content']),
-        }
     # codigo = content['data']['codigo']
     # print(codigo)
     # # Buscar en la BD de alumnos
@@ -77,9 +76,38 @@ def getAlumno(codigo_alumno):
     miConexion.close()
     return array_fetch
 
-def modelManage(message):
-    pass
+def model_manage(message):
+    response = {'message': '', 'tag': ''}
+    if(message['tag'] == 'despedida'):
+        response['message'] = message['response']
+        response['tag'] = message['tag']
+
+    if(message['tag'] == 'busqueda'):
+        pass
+
+    if(message['tag'] == 'recomendacion'):
+        pass
+
+    if(message['tag'] == 'prestamo'):
+        pass
+
+    if(message['tag'] == 'home'):
+        response['message'] = message['response']
+        response['tag'] = message['tag']
+
+    return response
+
 
 
 if __name__ == '__main__':
-    app.run(debug = True) 
+    app.run(debug = True)
+
+
+## TAGS
+# despedida
+# busqueda
+# recomendacion
+# prestamo
+# home
+
+## ESTADOS

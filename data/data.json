@@ -705,5 +705,67 @@
       "Qué eres": [
         "Soy una IA diseñada para dar conversación sobre varios temas y aprender de los humanos",
         "Soy una IA diseñada para conversar y aprender procesamiento del lenguaje natural con los humanos."
-      ]
+      ],
+
+
+
+
+      "Adios": {
+        "tag": "despedida",
+        "responses":
+        [
+          "Adios",
+          "Ten buen día",
+          "Nos vemos",
+          "Saludos",
+          "Vuelve pronto",
+          "Espero verte de nuevo",
+          "Chau",
+          "👋"
+        ]
+      },
+      "Chau": {
+        "tag": "despedida",
+        "responses":
+        [
+          "Adios",
+          "Ten buen día",
+          "Nos vemos",
+          "Saludos",
+          "Vuelve pronto",
+          "Espero verte de nuevo",
+          "Chau",
+          "👋"
+        ]
+      },
+      "Nos vemos": {
+        "tag": "despedida",
+        "responses":
+        [
+          "Adios",
+          "Ten buen día",
+          "Nos vemos",
+          "Saludos",
+          "Vuelve pronto",
+          "Espero verte de nuevo",
+          "Chau",
+          "👋"
+        ]
+      },
+      "Hasta luego": {
+        "tag": "despedida",
+        "responses":
+        [
+          "Adios",
+          "Ten buen día",
+          "Nos vemos",
+          "Saludos",
+          "Vuelve pronto",
+          "Espero verte de nuevo",
+          "Chau",
+          "👋"
+        ]
+      }
+
+
   }
