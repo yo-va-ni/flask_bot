@@ -17,6 +17,12 @@ const $chatbotMessages = $document.querySelector(".chatbot__messages");
 const $chatbotInput = $document.querySelector(".chatbot__input");
 const $chatbotSubmit = $document.querySelector(".chatbot__submit");
 
+
+// Vars
+// let status_busqueda = false;
+let previous_response = '';
+
+
 document.addEventListener(
   "keypress",
   event => {
@@ -53,7 +59,6 @@ document.getElementById("chat-circle").addEventListener(
     element[0].classList.remove("chatbot--closed");
       element[0].style.display = "block";
         $chatbotInput.focus();
-    console.log(this);
     document.getElementById("chat-circle").style.display="none";
     
   }
@@ -139,18 +144,38 @@ const multiChoiceAnswer = text => {
 
 const processResponse = res => {
   removeLoader();
+  console.log(res);
+  let message = '';
 
   /* TODO manage TAG */
   switch (res.tag) {
     case 'despedida':
       removeItemLS('codigo')
+      message = res.message;
+      break;
+    case 'parametros':
+      message = `${res.message}`;
+      for (let i = 0; i < res.data.length; i++) {
+        const param = res.data[i];
+        const item_param = `<br>${i+1}. ${param}`;
+        message += item_param;
+      }
+
+      break;
+    case 'parametro_input':
+      message = res.message;
+      break;
+    case '':
+      // removeItemLS('codigo')
+      message = res.message;
       break;
   
     default:
+      message = res.message;
       break;
   }
   
-  return res.message;
+  return message;
 };
 
 const setResponse = (res, delay = 0) => {
@@ -172,10 +197,16 @@ const scrollDown = () => {
 };
 
 const send = (text = "") => {
-  const aux_body = {
+
+  let aux_body;
+  
+  
+  aux_body = {
     data: {
       nuevo: (getItemLS('codigo') == null || getItemLS('codigo') == '' || getItemLS('codigo') == 'undefined') ? true : false,
-      content: text
+      content: text,
+      tag: previous_response['tag'] == 'parametro_input' ? 'db_search' : 'model',
+      param: previous_response['param'] || '',
     }
   }
   console.log(aux_body);
@@ -190,14 +221,12 @@ const send = (text = "") => {
   })
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      previous_response = res;
       if (res.cookie && res.cookie != '' && res.cookie != 'undefined'){
         console.warn(res.cookie)
         setItemLS('codigo', res.cookie);
       }
-      if (res.bye) {
-        removeItemLS('codigo');
-      }
+
       setResponse(res, loadingDelay + aiReplyDelay);
     })
     .catch(error => {
@@ -246,3 +275,11 @@ setItemLS = (cname, cvalue) => {
 removeItemLS = (cname) => {
   localStorage.removeItem(cname);
 }
+
+
+
+
+/* 
+  TAGS:
+  - parametros
+*/

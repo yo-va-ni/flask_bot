@@ -765,7 +765,108 @@
           "Chau",
           "👋"
         ]
+      },
+
+
+      "Quisiera buscar un libro": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "¿Tienes libros?": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "Tienes libros?": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "¿Tienes libros": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "Tienes libros": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "Quisiera pedir un libro": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "Buscar libros": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      "Libros": {
+        "tag": "busqueda",
+        "responses": [
+          "Puedes buscar por estos filtros: ",
+          "Aqui tengo algunos filtros de busqueda, escoge uno: ",
+          "Seleccione algun parametro de búsqueda:"
+        ]
+      },
+      
+      "Autor": {
+        "tag": "busqueda_parametros",
+        "responses": ["Autor"]
+      },
+      "Autores": {
+        "tag": "busqueda_parametros",
+        "responses": ["Autor"]
+      },
+      "Escritor": {
+        "tag": "busqueda_parametros",
+        "responses": ["Autor"]
+      },
+      "Nombre": {
+        "tag": "busqueda_parametros",
+        "responses": ["Nombre"]
+      },
+      "Titulo": {
+        "tag": "busqueda_parametros",
+        "responses": ["Nombre"]
+      },
+      "Titulo del libro": {
+        "tag": "busqueda_parametros",
+        "responses": ["Nombre"]
+      },
+      "ISBN": {
+        "tag": "busqueda_parametros",
+        "responses": ["ISBN"]
+      },
+      "ID": {
+        "tag": "busqueda_parametros",
+        "responses": ["ISBN"]
+      },
+      "identificador": {
+        "tag": "busqueda_parametros",
+        "responses": ["ISBN"]
       }
-
-
   }
