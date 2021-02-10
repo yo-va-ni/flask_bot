@@ -165,16 +165,51 @@ const processResponse = res => {
     case 'parametro_input':
       message = res.message;
       break;
+    case 'db_response':
+      if (res.message.length > 0) {
+        message = 'He encontrado esto para ti:<ol>';
+        let aux = '';
+        switch (res.param) {
+          case 'nombreLibro':
+            for (let i = 0; i < res.message.length; i++) {
+              aux += `<li>`;
+              aux += `${res.message[i][1]}, te lo puedo prestar por ${res.message[i][2]} días</li>`;
+              message += aux;
+            }
+            console.log(message);
+            break;
+          case 'nombreAutor':
+            for (let i = 0; i < res.message.length; i++) {
+              aux = `<li>`;
+              aux += `${res.message[i][2]}, te lo puedo prestar por ${res.message[i][3]} días</li>`;
+              message += aux;
+            }
+            console.log(message);
+            break;
+          case 'idLibro':
+            for (let i = 0; i < res.message.length; i++) {
+              aux += `<li>`;
+              aux += `${res.message[i][1]}, te lo puedo prestar por ${res.message[i][2]} días</li>`;
+              message += aux;
+            }
+            console.log(message);
+            break;
+        }
+
+        previous_response = res;
+      } else {
+        message = 'No he encontrado, lo siento u.u';
+      }
+      break;
     case '':
       // removeItemLS('codigo')
-      message = res.message;
+      message = res.message + '</ol>';
       break;
   
     default:
       message = res.message;
       break;
   }
-  
   return message;
 };
 
@@ -198,8 +233,9 @@ const scrollDown = () => {
 
 const send = (text = "") => {
 
+  const today = new Date();
+
   let aux_body;
-  
   
   aux_body = {
     data: {
@@ -209,6 +245,44 @@ const send = (text = "") => {
       param: previous_response['param'] || '',
     }
   }
+
+  if (previous_response.tag === 'db_response') {
+    if (Number(text) > 0 && Number(text) <= previous_response.message.length) {
+      const book = previous_response.message[Number(text)-1];
+      switch (previous_response.param) {
+        case 'nombreLibro':
+          aux_body.data.content = {
+            id_libro: book[0],
+            id_estudiante: getItemLS('codigo'),
+            dias: book[2],
+          }
+          break;
+        case 'nombreAutor':
+          aux_body.data.content = {
+            id_libro: book[1],
+            id_estudiante: getItemLS('codigo'),
+            dias: book[3],
+          }
+          break;
+        case 'idLibro':
+          aux_body.data.content = {
+            id_libro: book[0],
+            id_estudiante: getItemLS('codigo'),
+            dias: book[2],
+          }
+          break;
+      
+        default:
+          break;
+      }
+      aux_body.data.content['fecha'] = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+      aux_body.data.tag = 'busqueda_seleccion-recomendacion';
+      aux_body.data.param = previous_response.param;
+    } else {
+      aux_body.data.tag = 'busqueda_seleccion-no_choose';
+    }
+  }
+
   console.log(aux_body);
 
   fetch(`${baseUrl}set`, {

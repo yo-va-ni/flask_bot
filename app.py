@@ -58,7 +58,19 @@ def set():
             }
     elif(user_content['tag'] == 'db_search'):
         db_response = getLibros(user_content['param'], user_content['content'])
-        response = db_response
+        response = {
+            'message': db_response['response'],
+            'tag': 'db_response',
+            'param': db_response['param'],
+        }
+    elif(user_content['tag'] == 'busqueda_seleccion-recomendacion'):
+        book = user_content['content']
+        db_response = insertReserva(book['id_libro'], book['id_estudiante'], book['dias'], book['fecha'])
+        response = {
+            'message': 'a',
+            'tag': 'recomendacion',
+            'param': 'b'
+        }
     else:
         model_response = get_response(user_content['content'])
         response = model_manage(model_response)
@@ -87,6 +99,8 @@ def getAlumno(codigo_alumno):
     miConexion.close()
     return array_fetch
 
+
+
 def getLibros(param, param_input):
     miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
     cur = miConexion.cursor()
@@ -101,7 +115,16 @@ def getLibros(param, param_input):
     array_fetch = cur.fetchall()
     miConexion.close()
     
-    return array_fetch
+    return {'param': param, 'response': array_fetch}
+
+def insertReserva(id_libro, id_estudiante, dias, fecha):
+    miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
+    cur = miConexion.cursor()
+    sentencia = "INSERT INTO PRESTAMO (idPrestamo, idEstudiante, fecPrestamo, diasPrestamo) VALUES ('{}','{}','{}',{})".format('P-32', id_estudiante, fecha, dias)
+    print(sentencia)
+    cur.execute(sentencia)
+    print(cur.rowcount)
+
 
 def model_manage(message):
     response = {'message': '', 'tag': ''}
