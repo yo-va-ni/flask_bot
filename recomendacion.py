@@ -40,10 +40,11 @@ def getConsequents(codlibro):
     #Conexion con la base de datos
     miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
     cur = miConexion.cursor()
-    sentencia = "SELECT nombreLibro FROM LIBRO WHERE idLibro='{}'".format(asociaciones.iloc[indice,1])
+    sentencia = "SELECT idLibro,nombreLibro,maxDias FROM LIBRO WHERE idLibro='{}'".format(asociaciones.iloc[indice,1])
     cur.execute(sentencia)
     array_fetch=cur.fetchall()
-    return array_fetch[0][0]
+    return array_fetch
+    # return array_fetch[0][0]
 
 a = getConsequents('L-10')
 print(a)

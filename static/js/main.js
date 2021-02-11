@@ -151,6 +151,7 @@ const processResponse = res => {
   switch (res.tag) {
     case 'despedida':
       removeItemLS('codigo')
+      removeItemLS('lista_libros')
       message = res.message;
       break;
     case 'parametros':
@@ -195,15 +196,22 @@ const processResponse = res => {
             console.log(message);
             break;
         }
+        message += '</ol> ¿Cual deseas prestarte?';
 
         previous_response = res;
       } else {
         message = 'No he encontrado, lo siento u.u';
       }
       break;
+    case 'recomendacion':
+      message += 'Te recomiendo este libro: <br>';
+      message += `📖  ${res.message.nombreLibro}, por ${res.message.maxDias} días<br>`;
+      message += 'Deseas llevarlo? [si/no]';
+
+      break;
     case '':
       // removeItemLS('codigo')
-      message = res.message + '</ol>';
+      message = res.message;
       break;
   
     default:
@@ -252,35 +260,46 @@ const send = (text = "") => {
       switch (previous_response.param) {
         case 'nombreLibro':
           aux_body.data.content = {
-            id_libro: book[0],
-            id_estudiante: getItemLS('codigo'),
-            dias: book[2],
+            idLibro: book[0],
+            nombreLibro: book[1],
+            maxDias: book[2],
           }
           break;
         case 'nombreAutor':
           aux_body.data.content = {
-            id_libro: book[1],
-            id_estudiante: getItemLS('codigo'),
-            dias: book[3],
+            idLibro: book[1],
+            nombreLibro: book[1],
+            maxDias: book[3],
           }
           break;
         case 'idLibro':
           aux_body.data.content = {
-            id_libro: book[0],
-            id_estudiante: getItemLS('codigo'),
-            dias: book[2],
+            idLibro: book[0],
+            nombreLibro: book[1],
+            maxDias: book[2],
           }
           break;
       
         default:
           break;
       }
+      saveBook(aux_body.data.content);
       aux_body.data.content['fecha'] = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
       aux_body.data.tag = 'busqueda_seleccion-recomendacion';
       aux_body.data.param = previous_response.param;
     } else {
       aux_body.data.tag = 'busqueda_seleccion-no_choose';
     }
+  } else if(previous_response.tag === 'recomendacion') {
+    if (text.toUpperCase() == 'SI') {
+      saveBook(previous_response.message);
+      aiMessage('Ya lo agregué. Puedes seguir buscando');
+      previous_response.tag = 'home';
+      return
+    }
+    aiMessage('Avísame si encuentras algo interesante');
+    previous_response.tag = 'home';
+    return
   }
 
   console.log(aux_body);
@@ -299,6 +318,8 @@ const send = (text = "") => {
       if (res.cookie && res.cookie != '' && res.cookie != 'undefined'){
         console.warn(res.cookie)
         setItemLS('codigo', res.cookie);
+        setItemLS('codigo_prestamo', res.codigo_prestamo);
+        setItemLS('lista_libros', JSON.stringify([]))
       }
 
       setResponse(res, loadingDelay + aiReplyDelay);
@@ -308,34 +329,6 @@ const send = (text = "") => {
       resetInputField();
       console.log(error);
     });
-
-  /* fetch(`${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
-    method: "GET",
-    dataType: "json",
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    headers: {
-      Authorization: "Bearer " + accessToken,
-      "Content-Type": "application/json; charset=utf-8",
-      Vary: 'Origin',
-    }
-  })
-    .then(response => response.json())
-    .then(res => {
-      if (res.status < 200 || res.status >= 300) {
-        let error = new Error(res.statusText);
-        throw error;
-      }
-      return res;
-    })
-    .then(res => {
-      setResponse(res.result, loadingDelay + aiReplyDelay);
-    })
-    .catch(error => {
-      setResponse(errorMessage, loadingDelay + aiReplyDelay);
-      resetInputField();
-      console.log(error);
-    }); */
 
   aiMessage(loader, true, loadingDelay);
 };
@@ -348,6 +341,15 @@ setItemLS = (cname, cvalue) => {
 }
 removeItemLS = (cname) => {
   localStorage.removeItem(cname);
+}
+
+saveBook = (body) => {
+  const bookList = JSON.parse(getItemLS('lista_libros'));
+  const auxList = bookList.filter(book => book.idLibro == body.idLibro);
+  if (auxList.length == 0) {
+    bookList.push(body);
+  }
+  setItemLS('lista_libros',JSON.stringify(bookList));
 }
 
 

@@ -7,6 +7,7 @@ import mysql.connector
 import pandas as pd
 
 from my_model import get_response
+from recomendacion import getConsequents
 
 user = ''
 params_array = [
@@ -45,11 +46,12 @@ def set():
 
     if user_content['nuevo']:
         res = getAlumno(user_content['content'])
+        cod = getCodigoPrestamo()
         if (len(res) > 0):
             response = {
                 'message': 'Bienvenido {}\n¿En qué te puedo ayudar?'.format(res[0][1]),
                 'cookie': '{}'.format(res[0][0]),
-                
+                'codigo_prestamo': cod
             }
         else:
             response = {
@@ -65,11 +67,12 @@ def set():
         }
     elif(user_content['tag'] == 'busqueda_seleccion-recomendacion'):
         book = user_content['content']
-        db_response = insertReserva(book['id_libro'], book['id_estudiante'], book['dias'], book['fecha'])
+        #db_response = insertReserva(book['id_libro'], book['id_estudiante'], book['dias'], book['fecha'])
+        getRecomendacion(book['idLibro'])
         response = {
-            'message': 'a',
+            'message': getRecomendacion(book['idLibro']),
             'tag': 'recomendacion',
-            'param': 'b'
+            'param': user_content['param']
         }
     else:
         model_response = get_response(user_content['content'])
@@ -88,6 +91,26 @@ def set():
 @app.route('/get/')
 def get():
     return session.get('key', 'not set')
+
+
+def getCodigoPrestamo():
+    miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
+    cur = miConexion.cursor()
+    sentencia = "SELECT idPrestamo from PRESTAMO"
+    cur.execute(sentencia)
+    array_fetch=cur.fetchall()
+    return "P" + str(len(array_fetch) + 1)
+    
+
+def getRecomendacion(id_libro):
+    recom = getConsequents(id_libro)
+    libro = {
+        'idLibro': recom[0][0],
+        'nombreLibro': recom[0][1],
+        'maxDias': recom[0][2]
+    }
+    return libro
+
 
 def getAlumno(codigo_alumno):
     miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
@@ -123,6 +146,7 @@ def insertReserva(id_libro, id_estudiante, dias, fecha):
     sentencia = "INSERT INTO PRESTAMO (idPrestamo, idEstudiante, fecPrestamo, diasPrestamo) VALUES ('{}','{}','{}',{})".format('P-32', id_estudiante, fecha, dias)
     print(sentencia)
     cur.execute(sentencia)
+    miConexion.commit()
     print(cur.rowcount)
 
 
