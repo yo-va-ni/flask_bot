@@ -93,12 +93,22 @@ def get():
     return session.get('key', 'not set')
 
 
+@app.route('/setPrestamo', methods = ['POST'])
+def setPrestamo():
+    req = request.json
+    print(req)
+    insertReserva(req)
+    return jsonify('okay')
+
+
 def getCodigoPrestamo():
     miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
     cur = miConexion.cursor()
     sentencia = "SELECT idPrestamo from PRESTAMO"
     cur.execute(sentencia)
     array_fetch=cur.fetchall()
+    cur.close()
+    miConexion.close()
     return "P" + str(len(array_fetch) + 1)
     
 
@@ -119,6 +129,7 @@ def getAlumno(codigo_alumno):
     cur.execute(sentencia)
     array_fetch=cur.fetchall()
     # df = pd.DataFrame(array_fetch,columns=['itemPrestamo','idPrestamo','idEstudiante','idLibro','nombreLibro'])
+    cur.close()
     miConexion.close()
     return array_fetch
 
@@ -136,18 +147,26 @@ def getLibros(param, param_input):
 
     cur.execute(sentencia)
     array_fetch = cur.fetchall()
+    cur.close()
     miConexion.close()
     
     return {'param': param, 'response': array_fetch}
 
-def insertReserva(id_libro, id_estudiante, dias, fecha):
+def insertReserva(jp):
+    sentencia="insert into PRESTAMO values ('{}','{}','{}',{})".format(jp['idPrestamo'],jp['idEstudiante'],jp['fecPrestamo'],jp['diasPrestamo'])
+    runquery(sentencia)
+    for i in range(len(jp['libros'])):
+        sentencia="insert into DETALLEPRESTAMO values ('{}',{},'{}',{})".format(jp['idPrestamo'],i+1,jp['libros'][i]['idLibro'],0)
+        runquery(sentencia)
+
+def runquery(query=''):
     miConexion = mysql.connector.connect(host='chatbot.czmuos7b0p9f.sa-east-1.rds.amazonaws.com', user= 'chatbotAD', passwd='chatbotAD', db='PrestamoBiblioteca' )
     cur = miConexion.cursor()
-    sentencia = "INSERT INTO PRESTAMO (idPrestamo, idEstudiante, fecPrestamo, diasPrestamo) VALUES ('{}','{}','{}',{})".format('P-32', id_estudiante, fecha, dias)
-    print(sentencia)
-    cur.execute(sentencia)
+    res = cur.execute(query)
     miConexion.commit()
-    print(cur.rowcount)
+    cur.close()
+    miConexion.close()
+
 
 
 def model_manage(message):
@@ -174,12 +193,14 @@ def model_manage(message):
     if(message['tag'] == 'recomendacion'):
         pass
 
-    if(message['tag'] == 'prestamo'):
-        pass
+    if(message['tag'] == 'confirmacion_prestamo'):
+        response['message'] = message['response']
+        response['tag'] = message['tag']
 
     if(message['tag'] == 'home'):
         response['message'] = message['response']
         response['tag'] = message['tag']
+    
 
     return response
 

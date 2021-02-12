@@ -868,5 +868,31 @@
       "identificador": {
         "tag": "busqueda_parametros",
         "responses": ["ISBN"]
+      },
+
+
+      "confirmo prestamo": {
+        "tag": "confirmacion_prestamo",
+        "responses": [
+          "Listo, ya registré tu reserva, puedes ir a recogerla"
+        ]
+      },
+      "quiero prestarme los libros reservados": {
+        "tag": "confirmacion_prestamo",
+        "responses": [
+          "Listo, ya registré tu reserva, puedes ir a recogerla"
+        ]
+      },
+      "confirmar prestamo": {
+        "tag": "confirmacion_prestamo",
+        "responses": [
+          "Listo, ya registré tu reserva, puedes ir a recogerla"
+        ]
+      },
+      "quiero realizar el prestamo": {
+        "tag": "confirmacion_prestamo",
+        "responses": [
+          "Listo, ya registré tu reserva, puedes ir a recogerla"
+        ]
       }
   }

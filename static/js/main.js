@@ -16,6 +16,18 @@ const $chatbotHeader = $document.querySelector(".chatbot__header");
 const $chatbotMessages = $document.querySelector(".chatbot__messages");
 const $chatbotInput = $document.querySelector(".chatbot__input");
 const $chatbotSubmit = $document.querySelector(".chatbot__submit");
+const $chatbotIntro = $document.querySelector("#intro");
+
+const setIntro = () => {
+  const codigo = localStorage.getItem('codigo');
+  if (codigo && codigo != '' && codigo != 'undefined') {
+  $chatbotIntro.innerHTML = '¿Quieres conversar?';  
+  } else {
+    $chatbotIntro.innerHTML = 'Ingresa tu código para continuar';
+  }
+}
+
+setIntro();
 
 
 // Vars
@@ -83,20 +95,22 @@ const userMessage = content => {
 const aiMessage = (content, isLoading = false, delay = 0) => {
   setTimeout(() => {
     removeLoader();
-    $chatbotMessages.innerHTML += `<li 
-      class='is-ai animation' 
-      id='${isLoading ? "is-loading" : ""}'>
-        <div class="is-ai__profile-picture">
-          <svg class="icon-avatar" viewBox="0 0 32 32">
-            <use xlink:href="#avatar" />
-          </svg>
-        </div>
-        <span class='chatbot__arrow chatbot__arrow--left'></span>
-        <div class='chatbot__message'>
-          ${content}
-        </div>
-      </li>`;
-    scrollDown();
+    if (content != null) {
+      $chatbotMessages.innerHTML += `<li 
+        class='is-ai animation' 
+        id='${isLoading ? "is-loading" : ""}'>
+          <div class="is-ai__profile-picture">
+            <svg class="icon-avatar" viewBox="0 0 32 32">
+              <use xlink:href="#avatar" />
+            </svg>
+          </div>
+          <span class='chatbot__arrow chatbot__arrow--left'></span>
+          <div class='chatbot__message'>
+            ${content}
+          </div>
+        </li>`;
+      scrollDown();
+    }
   }, delay);
 };
 
@@ -142,7 +156,7 @@ const multiChoiceAnswer = text => {
   return;
 };
 
-const processResponse = res => {
+const processResponse = (res) => {
   removeLoader();
   console.log(res);
   let message = '';
@@ -209,6 +223,18 @@ const processResponse = res => {
       message += 'Deseas llevarlo? [si/no]';
 
       break;
+    case 'confirmacion_prestamo':
+      const aux = setPrestamo2DB();
+      aux.then(res_prestamo => {
+        if (res_prestamo) {
+          message = res.message;
+          removeItemLS('lista_libros')
+        } else {
+          message = 'No tienes libros en tu lista';
+        }
+        aiMessage(message);
+      });
+      return null;
     case '':
       // removeItemLS('codigo')
       message = res.message;
@@ -218,6 +244,7 @@ const processResponse = res => {
       message = res.message;
       break;
   }
+  console.log(message);
   return message;
 };
 
@@ -352,8 +379,45 @@ saveBook = (body) => {
   setItemLS('lista_libros',JSON.stringify(bookList));
 }
 
+const getMaxDias = (book_list) => {
+  let maxDias = 0;
+  for (let i = 0; i < book_list.length; i++) {
+    if (book_list[i].maxDias > maxDias) {
+      maxDias = book_list[i].maxDias;
+    }
+  }
+  return maxDias;
+}
 
+const setPrestamo2DB = async () => {
+  const book_list = JSON.parse(getItemLS('lista_libros'));
+  const  today = new Date();
+  console.log(book_list.length);
+  if (book_list.length > 0) {
+    
+    const aux_body = {
+      idPrestamo: getItemLS('codigo_prestamo'),
+      idEstudiante: getItemLS('codigo'),
+      fecPrestamo: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+      diasPrestamo: getMaxDias(book_list),
+      libros: book_list,
+    }
+    
+    let response = await fetch(`${baseUrl}setPrestamo`, {
+      method: 'POST',
+      dataType: 'json',
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(aux_body),
+    });
+    response = await response.json();
+    console.log(response);
+    return true;
+  }
+  return false;
 
+}
 
 /* 
   TAGS:
