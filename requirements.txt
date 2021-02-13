@@ -28,7 +28,7 @@ mysql-connector==2.2.9
 nltk==3.5
 numpy==1.19.5
 packaging==20.9
-pandas==1.2.1
+pandas==1.1.5
 pathy==0.3.5
 Pillow==8.1.0
 preshed==3.0.5
