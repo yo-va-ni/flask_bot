@@ -218,7 +218,7 @@ const processResponse = (res) => {
       }
       break;
     case 'recomendacion':
-      message += 'Te recomiendo este libro: <br>';
+      message += 'Ya guardé el libro que escogiste, ¿no quisieras llevarte este libro?: <br>';
       message += `📖  ${res.message.nombreLibro}, por ${res.message.maxDias} días<br>`;
       message += 'Deseas llevarlo? [si/no]';
 
