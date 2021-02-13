@@ -207,7 +207,7 @@ def model_manage(message):
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, server = 'https://read-bot.herokuapp.com/')
 
 
 
