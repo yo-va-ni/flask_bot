@@ -228,7 +228,9 @@ const processResponse = (res) => {
       aux.then(res_prestamo => {
         if (res_prestamo) {
           message = res.message;
-          removeItemLS('lista_libros')
+          message += `<br>Hasta luego 👋, disfruta de tus ${JSON.parse(getItemLS('lista_libros')).length} libro(s)`;
+          removeItemLS('lista_libros');
+          localStorage.clear();
         } else {
           message = 'No tienes libros en tu lista';
         }

@@ -6,8 +6,8 @@ from flask import request
 import mysql.connector
 import pandas as pd
 
-from my_model import get_response
-from recomendacion import getConsequents
+from similarity import get_response
+from recommendation import getConsequents
 
 user = ''
 params_array = [
